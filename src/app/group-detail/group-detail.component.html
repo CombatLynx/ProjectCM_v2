@@ -1,0 +1,20 @@
+<div class="elem">
+<div *ngIf="group">
+  <div class="group-name">{{group.name | uppercase}}</div>
+<!--  <div><span>id: </span>{{group.id}}</div>-->
+  <div>
+    <label>name:
+      <input [(ngModel)]="group.name" placeholder="name"/>
+    </label>
+  </div>
+  <a routerLink="/dashboard">go back</a>
+</div>
+</div>
+
+<app-music-panel
+        [playListArray]="groupService.getActualPlayList()"
+        [songs]="groupService.getSongs(group.id)"
+        (updatePlayListEvent)="groupService.updatePlayList"
+>
+</app-music-panel>
+

@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 block-my-songs">
+      <div class="my-songs-name"> My songs </div>
+        <div *ngFor="let song of songs" class="list-my-songs">
+            <div (click)="openFile(song.url)">
+                {{song.name}}
+            </div>
+            <button class="add-song" type="submit" (click)="addToPlayList(song)">
+                <div class="add-song__element"> + </div>
+            </button>
+        </div>
+    </div>
+
+    <div class="col-6 block-my-playlist">
+      <div class="my-songs-playlist"> My play list </div>
+        <div *ngFor="let song of playListArray" class="list-my-playlist">
+            <div (click)="openFile(song.url)">
+                {{song.name}}
+            </div>
+            <button class="delete-song" type="submit" (click)="deleteFromPlayList(song)">
+                <div class="delete-song__element"> x </div>
+            </button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container block-menu">
+    <div class="row">
+        <div class="col-4 button-play"> <button type="submit" class="play" (click)="play()"> Play </button> </div>
+        <div class="col-4 button-pause"> <button type="submit" class="pause" (click)="pause()"> Pause </button> </div>
+        <div class="col-4 button-stop"> <button type="submit" class="stop" (click)="stop()"> Stop </button> </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 time-song">
+            <span> {{currentTime}} </span>
+            <label>
+                <input type="range" min="0" max="{{duration}}" [value]="seek" (input)="setSeekTo($event)">
+            </label>
+            <span> {{duration}} </span>
+        </div>
+
+        <div class="col-12 volume-song">
+          <label>
+            <input type="range" min="0" max="1" step="any" value="0.3" (input)="setVolume($event)">
+          </label>
+        </div>
+    </div>
+</div>

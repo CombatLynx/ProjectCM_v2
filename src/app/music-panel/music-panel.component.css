@@ -1,0 +1,174 @@
+.button-play
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.button-pause {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.button-stop
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.play,
+.pause,
+.stop
+{
+    background-color: #324062;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.my-songs-name,
+.my-songs-playlist
+{
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+}
+
+.block-my-songs {
+    margin-top: 1em;
+    border: 3px solid #324062;
+    border-radius: 5px;
+    background-color: #e2e2e2;
+    box-shadow: 0 0 10px;
+}
+
+.block-my-playlist {
+    margin-top: 1em;
+    border: 3px solid #324062;
+    border-radius: 5px;
+    background-color: #e2e2e2;
+    box-shadow: 0 0 10px;
+}
+
+.block-menu {
+    margin-top: 1em;
+    border: 3px solid #324062;
+    width: 500px;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    background-color: #e2e2e2;
+    box-shadow: 0 0 10px;
+}
+
+.list-my-songs,
+.list-my-playlist
+{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+.my-songs-name,
+.my-songs-playlist
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0,
+    #cad5e2 2px 2px 0, #cad5e2 2px 2px 0,
+    #cad5e2 3px 3px 0;
+    font: bold 1.5em Arial, sans-serif;
+}
+
+.add-song,
+.delete-song
+{
+    background-color: #324062;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 4px;
+    cursor: pointer;
+}
+
+.add-song__element
+{
+    padding-bottom: 0.2em;
+}
+
+.delete-song__element
+{
+    padding-bottom: 0.2em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+}
+
+@media (max-width: 580px) {
+    .block-menu {
+        width: 300px;
+    }
+    .button-play,
+    .button-pause,
+    .button-stop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 425px) {
+    .block-menu {
+        width: 300px;
+    }
+    .button-play,
+    .button-pause,
+    .button-stop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .play,
+    .pause,
+    .stop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 50px;
+        font-size: 17px;
+    }
+    .list-my-songs {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .block-menu {
+        width: 180px;
+    }
+}
+
+@media (max-width: 425px) {
+    .block-menu {
+        width: 250px;
+    }
+}
