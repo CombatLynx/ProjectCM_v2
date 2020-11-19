@@ -1,14 +1,20 @@
 <div class="elem">
 <div *ngIf="group">
   <div class="group-name">{{group.name | uppercase}}</div>
-<!--  <div><span>id: </span>{{group.id}}</div>-->
-  <div>
-    <label>name:
-      <input [(ngModel)]="group.name" placeholder="name"/>
-    </label>
+    <div class="container">
+      <div class="row position-item">
+        <div class="group-name__label col-6">
+          <label>name:
+            <input class="group-name__input" [(ngModel)]="group.name" placeholder="name"/>
+          </label>
+        </div>
+
+        <div class="col-6 group-name__button">
+          <button class="button-link" type="submit" routerLink="/dashboard">to return</button>
+        </div>
+      </div>
+    </div>
   </div>
-  <a routerLink="/dashboard">go back</a>
-</div>
 </div>
 
 <app-music-panel

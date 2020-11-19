@@ -36,3 +36,48 @@ button:disabled {
   font: bold 2em Arial, sans-serif;
   color: #324062;
 }
+
+.group-name__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group-name__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-link {
+  width: 180px;
+  border-width: 3px;
+  border-radius: 3px;
+  margin-right: 2em;
+  border-color: #183b96;
+  color: #324062;
+  background-color: #e2e2e2;
+  font-size: 17px;
+  margin-top: 23px;
+}
+
+@media (max-width: 770px) {
+  .group-name__input {
+    width: 130px;
+  }
+  .button-link {
+    font-size: 15px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 490px) {
+  .group-name__input {
+    width: 90px;
+    font-size: small;
+  }
+  .button-link {
+    font-size: 13px;
+    width: 100px;
+  }
+}

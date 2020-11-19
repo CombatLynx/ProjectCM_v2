@@ -120,6 +120,10 @@
     padding-right: 0.1em;
 }
 
+.header-volume {
+    margin-bottom: 0.5em;
+}
+
 @media (max-width: 580px) {
     .block-menu {
         width: 300px;
