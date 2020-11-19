@@ -1,42 +1,66 @@
 .groups {
-  margin: 0 0 2em 0;
+  margin: 2em 2em 2em 2em;
   list-style-type: none;
   padding: 0;
   width: 15em;
 }
 
-.groups li {
-  position: relative;
-  cursor: pointer;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .2em 0;
-  height: 2em;
-  border-radius: 4px;
+.position-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.groups a {
-  color: #333;
+.groups {
+  list-style-type: none;
+  counter-reset: num;
+  font-size: 16px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.groups .group-list {
+  position: relative;
+  margin: 0.5em 0 0 0;
+  padding: 5px 0 5px 0;
+  line-height: 1.5;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: #e2e2e2;
+}
+
+.group-link {
   text-decoration: none;
-  position: relative;
-  display: block;
-  width: 250px;
+}
+.group-link {
+  color: #324062; /* Цвет ссылок */
+}
+.group-link:visited {
+  color: #324062; /* Цвет посещенных ссылок */
+}
+.group-link:active {
+  color: #000000; /* Цвет активных ссылок */
 }
 
-.groups .badge {
+
+.groups .group-list:before {
+  content: counter(num);
+  counter-increment: num;
   display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.5em 0.7em 1.5em 1.7em;
-  background-color:#324062;
-  line-height: 1em;
-  left: -100px;
-  top: -4px;
-  height: 1em;
-  min-width: 13px;
-  text-align: right;
-  margin-right: 1.8em;
-  border-radius: 4px 0 0 4px;
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 38px;
+  height: 35px;
+  background: #324062;
+  color: #fff;
+  text-align: center;
+  line-height: 28px;
+  font-size: 15px;
+  border-radius: 4px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 4px;
 }
 
 .title-body {

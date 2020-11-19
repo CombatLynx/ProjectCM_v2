@@ -1,8 +1,14 @@
 <div class="title-body">My Groups</div>
-<ul class="groups">
-  <li *ngFor="let group of groups">
-    <a routerLink="/detail/{{group.id}}">
-      <span class="badge">{{group.id}}</span> {{group.name}}
-    </a>
-  </li>
-</ul>
+<div class="position-group">
+    <div class="row">
+        <div class="col-12">
+            <ol class="groups">
+                <li *ngFor="let group of groups" class="group-list">
+                    <a class="group-link" routerLink="/detail/{{group.id}}">
+                        <span class="group-name"> {{group.name}} </span>
+                    </a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>

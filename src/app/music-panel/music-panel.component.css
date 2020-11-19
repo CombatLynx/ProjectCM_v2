@@ -96,10 +96,10 @@
 .delete-song
 {
     background-color: #324062;
-    border: none;
+    border: 1px solid #000000;
     border-radius: 5px;
     color: white;
-    padding: 0 10px;
+    padding: 0 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -120,8 +120,19 @@
     padding-right: 0.1em;
 }
 
+.header-scroll,
 .header-volume {
     margin-bottom: 0.5em;
+    text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0,
+    #cad5e2 3px 3px 0, #cad5e2 4px 4px 0,
+    #cad5e2 5px 5px 0;
+    font: bold 1em Arial, sans-serif;
+    color: #324062;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 580px) {
