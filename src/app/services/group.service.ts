@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 import { Group} from '../interfaces/group.interfaces';
-import { GROUPS, SONGS } from '../data-array';
+import { GROUPS } from '../data-array';
 
 @Injectable({
   providedIn: 'root'
