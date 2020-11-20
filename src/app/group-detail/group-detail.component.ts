@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 
-import { Group } from '../interfaces/group__and__song';
-import { GroupService} from '../services/group.service';
+import { Group } from '../interfaces/group.interfaces';
+import { GroupService } from '../services/group.service';
 
 @Component({
   selector: 'app-group-detail',

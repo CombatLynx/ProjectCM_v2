@@ -1,9 +1,10 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-import {Observable, of} from 'rxjs';
+import { Observable, of } from 'rxjs';
 
-import {Group, Song} from '../interfaces/group__and__song';
-import {GROUPS, SONGS} from '../data__array';
+import { Group } from '../interfaces/group.interfaces';
+import { Song } from '../interfaces/song.interfaces';
+import { GROUPS, SONGS } from '../data__array';
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +33,7 @@ export class GroupService {
     if (!groupId) {
       return SONGS;
     } else {
-      return SONGS.filter((s) => s.categoriesId === groupId);
+      return SONGS.filter((s) => s.groupId === groupId);
     }
   }
 }
