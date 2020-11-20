@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
 
-import { Group } from '../interfaces/group.interfaces';
-import { Song } from '../interfaces/song.interfaces';
+import { Group} from '../interfaces/group.interfaces';
 import { GROUPS, SONGS } from '../data-array';
 
 @Injectable({
