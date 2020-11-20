@@ -18,9 +18,9 @@
 </div>
 
 <app-music-panel
-        [playListArray]="groupService.getActualPlayList()"
-        [songs]="groupService.getSongs(group.id)"
-        (updatePlayListEvent)="groupService.updatePlayList"
+        [playListArray]="playListService.getActualPlayList()"
+        [songs]="songService.getSongs(group.id)"
+        (updatePlayListEvent)="playListService.updatePlayList"
 >
 </app-music-panel>
 

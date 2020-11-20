@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { Group } from '../interfaces/group.interfaces';
 import { GroupService } from '../services/group.service';
+import {PlayListService} from '../services/play-list.service';
+import {SongService} from '../services/song.service';
 
 @Component({
   selector: 'app-group-detail',
@@ -14,7 +16,9 @@ export class GroupDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    public groupService: GroupService
+    public groupService: GroupService,
+    public playListService: PlayListService,
+    public songService: SongService
   ) {}
 
   ngOnInit(): void {
