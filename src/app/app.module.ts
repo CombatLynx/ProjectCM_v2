@@ -5,14 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxPopper } from 'angular-popper';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { GroupDetailComponent } from './group-detail/group-detail.component';
-import { GroupsComponent } from './groups/groups.component';
-import { MusicPanelComponent} from './music-panel/music-panel.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { GroupDetailComponent } from './components/group-detail/group-detail.component';
+import { GroupsComponent } from './components/groups/groups.component';
+import { MusicPanelComponent} from './components/music-panel/music-panel.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   imports: [

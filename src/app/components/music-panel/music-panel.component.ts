@@ -1,7 +1,7 @@
 import {Component, Input, Output, OnDestroy, EventEmitter} from '@angular/core';
 import { Observable } from 'rxjs';
 import * as moment from 'moment';
-import { Song } from '../interfaces/song.interfaces';
+import { Song } from '../../interfaces/song.interfaces';
 
 @Component({
   selector: 'app-music-panel',

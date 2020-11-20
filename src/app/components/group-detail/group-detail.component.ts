@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Group } from '../interfaces/group.interfaces';
-import { GroupService } from '../services/group.service';
-import {PlayListService} from '../services/play-list.service';
-import {SongService} from '../services/song.service';
+import { Group } from '../../interfaces/group.interfaces';
+import { GroupService } from '../../services/group.service';
+import {PlayListService} from '../../services/play-list.service';
+import {SongService} from '../../services/song.service';
 
 @Component({
   selector: 'app-group-detail',
