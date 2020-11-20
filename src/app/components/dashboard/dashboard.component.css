@@ -27,7 +27,7 @@ a {
   text-align: center;
   color: #ffffff;
   background-color: #324062;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .module:hover {
@@ -39,6 +39,23 @@ a {
 .grid-pad {
   padding-top: 5em;
   padding-right: 20px;
+}
+
+.title-body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+  text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0,
+  #cad5e2 2px 2px 0, #cad5e2 2px 2px 0,
+  #cad5e2 3px 3px 0;
+  font: bold 2em Arial, sans-serif;
+}
+
+.name-group{
+  font-size: 30px;
+  display: inline;
 }
 
 @media (max-width: 690px) {
@@ -70,19 +87,9 @@ a {
   }
 }
 
-.title-body {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 1em;
-  text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0,
-  #cad5e2 2px 2px 0, #cad5e2 2px 2px 0,
-  #cad5e2 3px 3px 0;
-  font: bold 2em Arial, sans-serif;
-}
-
-.name-group{
-  font-size: 30px;
-  display: inline;
+@media (max-width: 690px) {
+  .module {
+    padding-top: 30px;
+    padding-bottom: 55px;
+  }
 }

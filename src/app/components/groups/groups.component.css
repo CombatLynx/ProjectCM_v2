@@ -33,13 +33,30 @@
   text-decoration: none;
 }
 .group-link {
-  color: #324062; /* Цвет ссылок */
+  color: #000000; /* Цвет ссылок */
 }
 .group-link:visited {
-  color: #324062; /* Цвет посещенных ссылок */
+  color: #000000; /* Цвет посещенных ссылок */
 }
 .group-link:active {
   color: #000000; /* Цвет активных ссылок */
+}
+
+.group-link:hover
+{
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 1px 10px 1px 10px;
+  text-shadow: #cad5e2 1px 1px 0, #cad5e2 1px 1px 0,
+  #cad5e2 1px 1px 0, #cad5e2 1px 1px 0,
+  #cad5e2 1px 1px 0;
+}
+
+.group-link:disabled
+{
+  background-color: #ffffff;
+  color: #ffffff;
+  cursor: auto;
 }
 
 

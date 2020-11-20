@@ -1,4 +1,4 @@
-label {
+.name {
   display: inline-block;
   width: 3em;
   margin: .5em 0;
@@ -6,25 +6,26 @@ label {
   font-weight: bold;
 }
 
-input {
+.group-name__input {
   height: 2em;
   font-size: 1em;
   padding-left: .4em;
 }
-button {
+
+.button-link {
   margin-top: 20px;
-  background-color: #eee;
+  background-color: #cad5e2;
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
 }
-button:hover {
-  background-color: #cfd8dc;
+.button-link:hover {
+  background-color: #cad5e2;
 }
-button:disabled {
-  background-color: #eee;
-  color: #ccc;
+.button-link:disabled {
+  background-color: #cad5e2;
+  color: #cad5e2;
   cursor: auto;
 }
 
@@ -50,11 +51,10 @@ button:disabled {
 }
 
 .button-link {
+  border: 2px solid #394c75;
   width: 180px;
-  border-width: 3px;
   border-radius: 3px;
   margin-right: 2em;
-  border-color: #183b96;
   color: #324062;
   background-color: #e2e2e2;
   font-size: 17px;

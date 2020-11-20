@@ -27,6 +27,18 @@
   font-size: 20px;
 }
 
+.header-item__dashboard:hover,
+.header-item__groups:hover {
+  background-color: #cad5e2;
+}
+
+.header-item__dashboard:disabled,
+.header-item__groups:disabled {
+  background-color: #cad5e2;
+  color: #cad5e2;
+  cursor: auto;
+}
+
 @media (max-width: 535px) {
   .header-item__dashboard {
     margin-bottom: 0.5em;

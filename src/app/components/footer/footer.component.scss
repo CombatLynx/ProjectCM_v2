@@ -3,3 +3,21 @@
   justify-content: center;
   align-items: center;
 }
+
+.assistant,
+.developer {
+  margin-bottom: 1.3em;
+  text-shadow: #cad5e2 2px 2px 0, #cad5e2 2px 2px 0,
+  #cad5e2 2px 2px 0, #cad5e2 2px 2px 0,
+  #cad5e2 2px 2px 0;
+  font: bold 1.3em Arial, sans-serif;
+  color: #324062;
+}
+
+@media (max-width: 400px) {
+  .assistant,
+  .developer
+  {
+    font-size: 1em;
+  }
+}

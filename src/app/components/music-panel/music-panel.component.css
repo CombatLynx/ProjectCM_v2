@@ -135,6 +135,26 @@
     flex-direction: column;
 }
 
+.delete-song:hover,
+.add-song:hover,
+.play:hover,
+.pause:hover,
+.stop:hover
+{
+    background-color: #9fb1f4;
+}
+
+.delete-song:disabled,
+.add-song:disabled,
+.play:disabled,
+.pause:disabled,
+.stop:disabled
+{
+    background-color: #9fb1f4;
+    color: #9fb1f4;
+    cursor: auto;
+}
+
 @media (max-width: 580px) {
     .block-menu {
         width: 300px;
