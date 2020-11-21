@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-6 block-my-songs">
+    <div class="col block-my-songs justify-content-center align-items-center">
       <div class="my-songs-name"> My songs </div>
         <div *ngFor="let song of songs" class="list-my-songs">
             <div (click)="openFile(song.url)">
@@ -10,9 +10,9 @@
                 <div class="add-song__element"> + </div>
             </button>
         </div>
-    </div>
+      </div>
 
-    <div class="col-6 block-my-playlist">
+    <div *ngIf="isShowPlayList" class="col-6 block-my-playlist">
       <div class="my-songs-playlist"> My play list </div>
         <div *ngFor="let song of playListArray" class="list-my-playlist">
             <div (click)="openFile(song.url)">
@@ -28,9 +28,20 @@
 
 <div class="container block-menu">
     <div class="row">
-        <div class="col-4 button-play"> <button type="submit" class="play" (click)="play()"> Play </button> </div>
-        <div class="col-4 button-pause"> <button type="submit" class="pause" (click)="pause()"> Pause </button> </div>
-        <div class="col-4 button-stop"> <button type="submit" class="stop" (click)="stop()"> Stop </button> </div>
+        <div class="col-3 button-play">
+            <button type="submit" class="play" (click)="play()"> Play </button>
+        </div>
+        <div class="col-3 button-pause">
+            <button type="submit" class="pause" (click)="pause()"> Pause </button>
+        </div>
+        <div class="col-3 button-stop">
+            <button type="submit" class="stop" (click)="stop()"> Stop </button>
+        </div>
+        <div class="col-3 button-add-playlist">
+            <button type="submit" class="add-playlist" (click)="toggle()">
+                <div class="text-playlist"> show/hide play list </div>
+            </button>
+        </div>
     </div>
 
     <div class="row">

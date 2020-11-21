@@ -24,15 +24,20 @@ export class MusicPanelComponent implements OnDestroy {
     'loadstart'
   ];
 
+  currentTime = '00:00';
+  duration = '00:00';
+  seek = 0;
+  isShowPlayList = false;
+
   @Input() public songs;
 
   @Input() playListArray: Set<Song>;
 
   @Output() updatePlayListEvent = new EventEmitter<Set<Song>>();
 
-  currentTime = '00:00';
-  duration = '00:00';
-  seek = 0;
+  toggle() {
+    this.isShowPlayList = ! this.isShowPlayList;
+  }
 
   public addToPlayList(song: Song): void {
     this.playListArray.add(song);
@@ -50,7 +55,6 @@ export class MusicPanelComponent implements OnDestroy {
       this.audioObj.play();
 
       const handler = (event: Event) => {
-        console.log(event);
         this.seek = this.audioObj.currentTime;
         this.duration = this.timeFormat(this.audioObj.duration);
         this.currentTime = this.timeFormat(this.audioObj.currentTime);
@@ -84,7 +88,6 @@ export class MusicPanelComponent implements OnDestroy {
 
   setVolume(ev) {
     this.audioObj.volume = ev.target.value;
-    console.log(ev.target.value);
   }
 
   openFile(url) {
@@ -93,7 +96,11 @@ export class MusicPanelComponent implements OnDestroy {
   }
 
   play() {
-    this.audioObj.play();
+    this.audioObj.play()
+        .then(_ => {
+        })
+          .catch(error => {
+          });
   }
 
   pause() {

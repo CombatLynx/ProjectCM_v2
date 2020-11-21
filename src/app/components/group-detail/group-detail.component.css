@@ -61,6 +61,10 @@
   margin-top: 23px;
 }
 
+.button-return {
+  font-weight: bold;
+}
+
 @media (max-width: 770px) {
   .group-name__input {
     width: 130px;

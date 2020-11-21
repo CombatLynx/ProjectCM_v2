@@ -7,6 +7,10 @@
     margin-bottom: 1em;
 }
 
+.button-add-playlist {
+    margin-top: 1em;
+}
+
 .button-pause {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -26,7 +30,20 @@
 .stop
 {
     background-color: #324062;
-    border: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.add-playlist {
+    background-color: #1c3985;
+    border: 1px solid black;
     border-radius: 5px;
     color: white;
     padding: 10px 20px 10px 20px;
@@ -63,7 +80,7 @@
 .block-menu {
     margin-top: 1em;
     border: 3px solid #324062;
-    width: 500px;
+    width: 600px;
     margin-bottom: 1em;
     border-radius: 5px;
     background-color: #e2e2e2;
@@ -90,6 +107,12 @@
     #cad5e2 2px 2px 0, #cad5e2 2px 2px 0,
     #cad5e2 3px 3px 0;
     font: bold 1.5em Arial, sans-serif;
+}
+
+.add-playlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .add-song,
@@ -155,23 +178,67 @@
     cursor: auto;
 }
 
+.add-playlist:hover {
+    background-color: #5c5cd4;
+}
+
+.add-playlist:disabled {
+    background-color: #fffa63;
+    color: #ef00d6;
+    cursor: auto;
+}
+
+.text-playlist {
+    font-size: 15px;
+
+}
+
+@media (max-width: 605px) {
+    .block-menu {
+        width: 500px;
+    }
+    .button-play,
+    .button-pause,
+    .button-stop,
+    .button-add-playlist,
+    .play,
+    .pause,
+    .stop,
+    .text-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+    }
+}
+
 @media (max-width: 580px) {
     .block-menu {
         width: 300px;
     }
     .button-play,
     .button-pause,
-    .button-stop {
+    .button-stop,
+    .play,
+    .pause,
+    .stop
+    {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        font-size: 12px;
+    }
+    .text-playlist {
+        width: 26px;
+        height: 30px;
+        font-size: 12px;
     }
 }
 
 @media (max-width: 425px) {
     .block-menu {
-        width: 300px;
+        width: 400px;
     }
     .button-play,
     .button-pause,
@@ -179,7 +246,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
     }
     .play,
     .pause,
@@ -187,12 +253,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 70px;
-        height: 50px;
-        font-size: 17px;
-    }
-    .list-my-songs {
+        width: 50px;
+        height: 30px;
         font-size: 15px;
+    }
+    .list-my-songs,
+    .list-my-playlist {
+        font-size: 15px;
+    }
+    .text-playlist {
+        width: 14px;
+        height: 20px;
+        font-size: 10px;
     }
 }
 

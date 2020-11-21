@@ -39,6 +39,11 @@
   cursor: auto;
 }
 
+.text-groups,
+.text-dashboard {
+  font-weight: bold;
+}
+
 @media (max-width: 535px) {
   .header-item__dashboard {
     margin-bottom: 0.5em;
