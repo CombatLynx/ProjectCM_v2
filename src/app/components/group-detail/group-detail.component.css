@@ -1,87 +1,91 @@
 .name {
-  display: inline-block;
-  width: 3em;
-  margin: .5em 0;
-  color: #324062;
-  font-weight: bold;
+    display: inline-block;
+    width: 3em;
+    margin: .5em 0;
+    color: #324062;
+    font-weight: bold;
 }
 
 .group-name__input {
-  height: 2em;
-  font-size: 1em;
-  padding-left: .4em;
+    height: 2em;
+    font-size: 1em;
+    padding-left: .4em;
 }
 
 .button-link {
-  margin-top: 20px;
-  background-color: #cad5e2;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
+    margin-top: 20px;
+    background-color: #cad5e2;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
 }
+
 .button-link:hover {
-  background-color: #cad5e2;
+    background-color: #cad5e2;
 }
+
 .button-link:disabled {
-  background-color: #cad5e2;
-  color: #cad5e2;
-  cursor: auto;
+    background-color: #cad5e2;
+    color: #cad5e2;
+    cursor: auto;
 }
 
 .group-name {
-  margin-top: 1em;
-  text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0,
-  #cad5e2 3px 3px 0, #cad5e2 4px 4px 0,
-  #cad5e2 5px 5px 0;
-  font: bold 2em Arial, sans-serif;
-  color: #324062;
+    margin-top: 1em;
+    text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0,
+    #cad5e2 3px 3px 0, #cad5e2 4px 4px 0,
+    #cad5e2 5px 5px 0;
+    font: bold 2em Arial, sans-serif;
+    color: #324062;
 }
 
 .group-name__label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .group-name__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.5em;
 }
 
 .button-link {
-  border: 2px solid #394c75;
-  width: 180px;
-  border-radius: 3px;
-  margin-right: 2em;
-  color: #324062;
-  background-color: #e2e2e2;
-  font-size: 17px;
-  margin-top: 23px;
+    border: 2px solid #394c75;
+    width: 180px;
+    border-radius: 3px;
+    color: #324062;
+    background-color: #e2e2e2;
+    font-size: 17px;
+    margin-top: 23px;
 }
 
 .button-return {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 @media (max-width: 770px) {
-  .group-name__input {
-    width: 130px;
-  }
-  .button-link {
-    font-size: 15px;
-    width: 150px;
-  }
+    .group-name__input {
+        width: 130px;
+    }
+
+    .button-link {
+        font-size: 15px;
+        width: 150px;
+    }
 }
 
 @media (max-width: 490px) {
-  .group-name__input {
-    width: 90px;
-    font-size: small;
-  }
-  .button-link {
-    font-size: 13px;
-    width: 100px;
-  }
+    .group-name__input {
+        width: 90px;
+        font-size: small;
+    }
+
+    .button-link {
+        font-size: 13px;
+        width: 100px;
+    }
 }

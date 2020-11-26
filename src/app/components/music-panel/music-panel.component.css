@@ -1,5 +1,4 @@
-.button-play
-{
+.button-play {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -7,17 +6,12 @@
     margin-bottom: 1em;
 }
 
-.button-add-playlist {
-    margin-top: 1em;
-}
-
 .button-pause {
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-.button-stop
-{
+.button-stop {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -27,8 +21,7 @@
 
 .play,
 .pause,
-.stop
-{
+.stop {
     background-color: #324062;
     border: 1px solid black;
     border-radius: 5px;
@@ -55,8 +48,7 @@
 }
 
 .my-songs-name,
-.my-songs-playlist
-{
+.my-songs-playlist {
     margin-top: 0.5em;
     margin-bottom: 2em;
 }
@@ -77,19 +69,22 @@
     box-shadow: 0 0 10px;
 }
 
+.my-song {
+    padding-left: 1.05em;
+    padding-right: 1.05em;
+}
+
 .block-menu {
-    margin-top: 1em;
     border: 3px solid #324062;
-    width: 600px;
-    margin-bottom: 1em;
     border-radius: 5px;
     background-color: #e2e2e2;
     box-shadow: 0 0 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .list-my-songs,
-.list-my-playlist
-{
+.list-my-playlist {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 1em;
@@ -97,8 +92,7 @@
 }
 
 .my-songs-name,
-.my-songs-playlist
-{
+.my-songs-playlist {
     position: relative;
     display: flex;
     align-items: center;
@@ -116,8 +110,7 @@
 }
 
 .add-song,
-.delete-song
-{
+.delete-song {
     background-color: #324062;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -131,13 +124,11 @@
     cursor: pointer;
 }
 
-.add-song__element
-{
+.add-song__element {
     padding-bottom: 0.2em;
 }
 
-.delete-song__element
-{
+.delete-song__element {
     padding-bottom: 0.2em;
     padding-left: 0.1em;
     padding-right: 0.1em;
@@ -145,6 +136,7 @@
 
 .header-scroll,
 .header-volume {
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
     text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0,
     #cad5e2 3px 3px 0, #cad5e2 4px 4px 0,
@@ -162,8 +154,7 @@
 .add-song:hover,
 .play:hover,
 .pause:hover,
-.stop:hover
-{
+.stop:hover {
     background-color: #9fb1f4;
 }
 
@@ -171,8 +162,7 @@
 .add-song:disabled,
 .play:disabled,
 .pause:disabled,
-.stop:disabled
-{
+.stop:disabled {
     background-color: #9fb1f4;
     color: #9fb1f4;
     cursor: auto;
@@ -193,89 +183,330 @@
 
 }
 
-@media (max-width: 605px) {
+.volume-song {
+    padding-bottom: 0.5em;
+}
+
+@media (max-width: 2560px) {
     .block-menu {
-        width: 500px;
+        width: 955px;
     }
+
     .button-play,
     .button-pause,
     .button-stop,
-    .button-add-playlist,
-    .play,
-    .pause,
-    .stop,
-    .text-playlist {
+    .button-add-playlist {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .play,
+    .pause,
+    .stop,
+    .add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .list-my-songs,
+    .list-my-playlist {
+        font-size: 20px;
+    }
+
+    .add-playlist {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .block-menu {
+        width: 850px;
+    }
+
+    .button-play,
+    .button-pause,
+    .button-stop,
+    .button-add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .play,
+    .pause,
+    .stop,
+    .add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .list-my-songs,
+    .list-my-playlist {
+        font-size: 20px;
+    }
+
+    .add-playlist {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .block-menu {
+        width: 650px;
+    }
+
+    .button-play,
+    .button-pause,
+    .button-stop,
+    .button-add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .play,
+    .pause,
+    .stop,
+    .add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .list-my-songs,
+    .list-my-playlist {
+        font-size: 20px;
+    }
+
+    .add-playlist {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .block-menu {
+        width: 650px;
+    }
+
+    .button-play,
+    .button-pause,
+    .button-stop,
+    .button-add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .play,
+    .pause,
+    .stop,
+    .add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .list-my-songs,
+    .list-my-playlist {
+        font-size: 20px;
+    }
+
+    .add-playlist {
+        width: 200px;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 620px) {
+    .block-menu {
+        width: 500px;
+    }
+
+    .button-play,
+    .button-pause,
+    .button-stop,
+    .button-add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .play,
+    .pause,
+    .stop,
+    .add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .list-my-songs,
+    .list-my-playlist {
+        font-size: 20px;
+    }
+
+    .add-playlist {
+        width: 200px;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .block-menu {
+        width: 450px;
+    }
+
+    .button-play,
+    .button-pause,
+    .button-stop,
+    .button-add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .play,
+    .pause,
+    .stop,
+    .add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 50px;
+        font-size: 13px;
+    }
+
+    .list-my-songs,
+    .list-my-playlist {
+        font-size: 13px;
+    }
+
+    .add-playlist {
+        width: 200px;
+        height: 50px;
         font-size: 13px;
     }
 }
 
-@media (max-width: 580px) {
+
+@media (max-width: 525px) {
     .block-menu {
-        width: 300px;
-    }
-    .button-play,
-    .button-pause,
-    .button-stop,
-    .play,
-    .pause,
-    .stop
-    {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        font-size: 12px;
-    }
-    .text-playlist {
-        width: 26px;
-        height: 30px;
-        font-size: 12px;
+        width: 350px;
     }
 }
 
 @media (max-width: 425px) {
     .block-menu {
-        width: 400px;
+        width: 300px;
     }
+
     .button-play,
     .button-pause,
-    .button-stop {
+    .button-stop,
+    .button-add-playlist {
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     .play,
     .pause,
-    .stop {
+    .stop,
+    .add-playlist {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50px;
+        width: 70px;
         height: 30px;
-        font-size: 15px;
+        font-size: 13px;
     }
+
     .list-my-songs,
     .list-my-playlist {
         font-size: 15px;
     }
-    .text-playlist {
-        width: 14px;
-        height: 20px;
+
+    .add-playlist {
+        width: 70px;
+        height: 30px;
         font-size: 10px;
     }
-}
 
-@media (max-width: 400px) {
-    .block-menu {
-        width: 180px;
+    .add-song,
+    .delete-song {
+        font-size: 15px;
+        padding: 0 25px;
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 375px) {
     .block-menu {
         width: 250px;
+    }
+
+    .button-play,
+    .button-pause,
+    .button-stop,
+    .button-add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .play,
+    .pause,
+    .stop,
+    .add-playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    .list-my-songs,
+    .list-my-playlist {
+        font-size: 13px;
+    }
+
+    .add-playlist {
+        width: 50px;
+        height: 20px;
+        font-size: 8px;
+    }
+
+    .add-song,
+    .delete-song {
+        font-size: 12px;
+        padding: 0 20px;
     }
 }

@@ -1,27 +1,21 @@
 <div class="elem">
-<div *ngIf="group">
-  <div class="group-name">{{group.name | uppercase}}</div>
-    <div class="container">
-      <div class="row position-item">
-        <div class="group-name__label col-6">
-          <label class="name">name:
-            <input class="group-name__input" [(ngModel)]="group.name" placeholder="name"/>
-          </label>
+    <div *ngIf="group">
+        <div class="group-name">{{group.name | uppercase}}</div>
+        <div class="container">
+            <div class="row position-item">
+                <div class="col-12 group-name__button">
+                    <button class="button-link" routerLink="/dashboard" type="submit">
+                        <div class="button-return"> return</div>
+                    </button>
+                </div>
+            </div>
         </div>
-
-        <div class="col-6 group-name__button">
-          <button class="button-link" type="submit" routerLink="/dashboard">
-            <div class="button-return"> return </div>
-          </button>
-        </div>
-      </div>
     </div>
-  </div>
 </div>
 
 <app-music-panel
+        (updatePlayListEvent)="playListService.updatePlayList"
         [playListArray]="playListService.getActualPlayList()"
         [songs]="songService.getSongs(group.id)"
-        (updatePlayListEvent)="playListService.updatePlayList"
 >
 </app-music-panel>

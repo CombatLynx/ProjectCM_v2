@@ -1,63 +1,64 @@
-<div class="container">
-  <div class="row">
-    <div class="col block-my-songs justify-content-center align-items-center">
-      <div class="my-songs-name"> My songs </div>
-        <div *ngFor="let song of songs" class="list-my-songs">
-            <div (click)="openFile(song.url)">
-                {{song.name}}
+<div class="container my-song">
+    <div class="row">
+        <div class="col block-my-songs justify-content-center align-items-center">
+            <div class="my-songs-name"> My songs</div>
+            <div *ngFor="let song of songs" class="list-my-songs">
+                <div (click)="openFile(song.url)">
+                    {{song.name}}
+                </div>
+                <button (click)="addToPlayList(song); actionMethod($event)" class="add-song" type="submit">
+                    <div class="add-song__element">+</div>
+                </button>
             </div>
-            <button class="add-song" type="submit" (click)="addToPlayList(song)">
-                <div class="add-song__element"> + </div>
-            </button>
         </div>
-      </div>
 
-    <div *ngIf="isShowPlayList" class="col-6 block-my-playlist">
-      <div class="my-songs-playlist"> My play list </div>
-        <div *ngFor="let song of playListArray" class="list-my-playlist">
-            <div (click)="openFile(song.url)">
-                {{song.name}}
+        <div *ngIf="isShowPlayList" class="col-6 block-my-playlist">
+            <div class="my-songs-playlist"> My play list</div>
+            <div *ngFor="let song of playListArray" class="list-my-playlist">
+                <div (click)="openFile(song.url)">
+                    {{song.name}}
+                </div>
+                <button (click)="deleteFromPlayList(song)" class="delete-song" type="submit">
+                    <div class="delete-song__element">x</div>
+                </button>
             </div>
-            <button class="delete-song" type="submit" (click)="deleteFromPlayList(song)">
-                <div class="delete-song__element"> x </div>
-            </button>
         </div>
     </div>
-  </div>
 </div>
 
 <div class="container block-menu">
     <div class="row">
         <div class="col-3 button-play">
-            <button type="submit" class="play" (click)="play()"> Play </button>
+            <button (click)="play()" class="play" type="submit"> Play</button>
         </div>
         <div class="col-3 button-pause">
-            <button type="submit" class="pause" (click)="pause()"> Pause </button>
+            <button (click)="pause()" class="pause" type="submit"> Pause</button>
         </div>
         <div class="col-3 button-stop">
-            <button type="submit" class="stop" (click)="stop()"> Stop </button>
+            <button (click)="stop()" class="stop" type="submit"> Stop</button>
         </div>
         <div class="col-3 button-add-playlist">
-            <button type="submit" class="add-playlist" (click)="toggle()">
-                <div class="text-playlist"> show/hide play list </div>
-            </button>
+            <button (click)="toggle()" class="add-playlist" type="submit"> Play list</button>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-12 header-scroll"> Scroll bar </div>
+        <div class="col-12 header-scroll"> Scroll bar</div>
         <div class="col-12 time-song">
             <span> {{currentTime}} </span>
             <label>
-                <input type="range" min="0" max="{{duration}}" [value]="seek" (input)="setSeekTo($event)">
+                <input (input)="setSeekTo($event)" [value]="seek" class="scroll" max="{{duration}}"
+                       min="0"
+                       type="range">
             </label>
             <span> {{duration}} </span>
         </div>
-        <div class="col-12 header-volume"> Volume </div>
+        <div class="col-12 header-volume"> Volume</div>
         <div class="col-12 volume-song">
-          <label> min
-            <input class="scroll-bar" type="range" min="0" max="1" step="any" value="0.3" (input)="setVolume($event)">
-          </label> max
+            <label> min
+                <input (input)="setVolume($event)" class="scroll-bar" max="1" min="0" step="any" type="range"
+                       value="0.3">
+            </label> max
         </div>
     </div>
 </div>
