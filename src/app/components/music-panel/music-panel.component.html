@@ -43,22 +43,29 @@
     </div>
 
     <div class="row">
-        <div class="col-12 header-scroll"> Scroll bar</div>
-        <div class="col-12 time-song">
-            <span> {{currentTime}} </span>
-            <label>
-                <input (input)="setSeekTo($event)" [value]="seek" class="scroll" max="{{duration}}"
-                       min="0"
-                       type="range">
-            </label>
-            <span> {{duration}} </span>
+        <div class="col-12 position-scroll-bar">
+            <div class="header-scroll"> Scroll bar</div>
+            <div class="time-song">
+                <span class="time-begin"> {{currentTime}} </span>
+                <label>
+                    <input (input)="setSeekTo($event)" [value]="seek" class="scroll-bar" max="{{duration}}"
+                           min="0"
+                           type="range">
+                </label>
+                <span class="time-end"> {{duration}} </span>
+            </div>
         </div>
-        <div class="col-12 header-volume"> Volume</div>
-        <div class="col-12 volume-song">
-            <label> min
-                <input (input)="setVolume($event)" class="scroll-bar" max="1" min="0" step="any" type="range"
-                       value="0.3">
-            </label> max
+
+        <div class="col-12 position-scroll-volume">
+            <div class="header-volume"> Volume</div>
+            <div class="volume-song">
+                <label>
+                    <span class="min"> min </span>
+                    <input (input)="setVolume($event)" class="scroll-bar" max="1" min="0" step="any" type="range"
+                           value="0.3">
+                    <span class="max"> max </span>
+                </label>
+            </div>
         </div>
     </div>
 </div>
