@@ -35,6 +35,17 @@ export class MusicPanelComponent implements OnDestroy {
 
     @Output() public updatePlayListEvent = new EventEmitter<Set<Song>>();
 
+    private $event: MouseEvent;
+
+    actionMethod($event: MouseEvent) {
+        ($event.target as HTMLButtonElement).disabled = true;
+    }
+
+    listSong(song) {
+        this.addToPlayList(song);
+        this.actionMethod(this.$event);
+    }
+
     toggle() {
         this.isShowPlayList = !this.isShowPlayList;
     }
@@ -68,10 +79,6 @@ export class MusicPanelComponent implements OnDestroy {
                 this.removeEvent(this.audioObj, this.audioEvents, handler);
             };
         });
-    }
-
-    actionMethod($event: MouseEvent) {
-        ($event.target as HTMLButtonElement).disabled = true;
     }
 
     addEvent(obj, events, handler) {

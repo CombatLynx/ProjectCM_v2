@@ -6,7 +6,7 @@
                 <div (click)="openFile(song.url)">
                     {{song.name}}
                 </div>
-                <button (click)="addToPlayList(song); actionMethod($event)" class="add-song" type="submit">
+                <button (click)="listSong(song)" class="add-song" type="submit">
                     <div class="add-song__element">+</div>
                 </button>
             </div>
