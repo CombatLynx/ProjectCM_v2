@@ -18,7 +18,7 @@
                 <div (click)="openFile(song.url)">
                     {{song.name}}
                 </div>
-                <button (click)="deleteFromPlayList(song)" class="delete-song" type="submit">
+                <button (click)="listPlayList(song, $event)" class="delete-song" type="submit">
                     x
                 </button>
             </div>

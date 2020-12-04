@@ -40,6 +40,11 @@ export class MusicPanelComponent implements OnDestroy {
         this.addToPlayList(song);
     }
 
+    listPlayList(song, $clickEvent) {
+        this.actionMethod($clickEvent);
+        this.deleteFromPlayList(song);
+    }
+
     addSongToPlayList() {
         this.isShowPlayList = !this.isShowPlayList;
     }
@@ -50,10 +55,6 @@ export class MusicPanelComponent implements OnDestroy {
 
     private checkVisiblePlayList(): void {
         this.isShowPlayList = this.playListArray.size > 0;
-    }
-
-    toggle() {
-        this.isShowPlayList = !this.isShowPlayList;
     }
 
     public addToPlayList(song: Song): void {
