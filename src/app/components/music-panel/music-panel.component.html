@@ -6,8 +6,8 @@
                 <div (click)="openFile(song.url)">
                     {{song.name}}
                 </div>
-                <button (click)="listSong(song)" class="add-song" type="submit">
-                    <div class="add-song__element">+</div>
+                <button (click)="listSong(song, $event)" class="add-song" type="submit">
+                   +
                 </button>
             </div>
         </div>
@@ -19,7 +19,7 @@
                     {{song.name}}
                 </div>
                 <button (click)="deleteFromPlayList(song)" class="delete-song" type="submit">
-                    <div class="delete-song__element">x</div>
+                    x
                 </button>
             </div>
         </div>
@@ -48,7 +48,7 @@
             <div class="time-song">
                 <span class="time-begin"> {{currentTime}} </span>
                 <label>
-                    <input (input)="setSeekTo($event)" [value]="seek" class="scroll-bar" max="{{duration}}"
+                    <input (input)="setSeekTo($event)" [value]="seek" step="any" class="scroll-bar" max="{{duration}}"
                            min="0"
                            type="range">
                 </label>
@@ -61,7 +61,7 @@
             <div class="volume-song">
                 <label>
                     <span class="min"> min </span>
-                    <input (input)="setVolume($event)" class="scroll-bar" max="1" min="0" step="any" type="range"
+                    <input (input)="setVolume($event)" class="scroll-bar" max="1" min="0" type="range"
                            value="0.3">
                     <span class="max"> max </span>
                 </label>
