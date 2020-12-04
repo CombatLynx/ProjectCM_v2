@@ -6,8 +6,8 @@
                 <div (click)="openFile(song.url)">
                     {{song.name}}
                 </div>
-                <button (click)="listSong(song)" class="add-song" type="submit">
-                    <div class="add-song__element">+</div>
+                <button (click)="listSong(song, $event)" class="add-song" type="submit">
+                    +
                 </button>
             </div>
         </div>
@@ -19,7 +19,7 @@
                     {{song.name}}
                 </div>
                 <button (click)="deleteFromPlayList(song)" class="delete-song" type="submit">
-                    <div class="delete-song__element">x</div>
+                    x
                 </button>
             </div>
         </div>
