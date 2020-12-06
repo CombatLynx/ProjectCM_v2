@@ -40,10 +40,9 @@ export class MusicPanelComponent implements OnDestroy {
         this.addToPlayList(song);
     }
 
-    listPlayList(song, $clickEvent) {
+    listPlayList(song) {
         this.deleteFromPlayList(song);
-        (document.getElementById(($clickEvent.target as HTMLButtonElement).id + '+') as HTMLButtonElement)
-            .disabled = false;
+        (document.getElementById(song.id + '+') as HTMLButtonElement).disabled = false;
     }
 
     addSongToPlayList() {
@@ -69,13 +68,13 @@ export class MusicPanelComponent implements OnDestroy {
     }
 
     streamObserver(url) {
-        return new Observable(observer => {
+        return new Observable(() => {
 
             this.audioObj.src = url;
             this.audioObj.load();
             this.audioObj.play();
 
-            const handler = (event: Event) => {
+            const handler = () => {
                 this.seek = this.audioObj.currentTime;
                 this.duration = this.timeFormat(this.audioObj.duration);
                 this.durationInt = this.audioObj.duration;
