@@ -13,7 +13,6 @@ export class MusicPanelComponent implements OnDestroy {
     title = 'musicAngular';
     audioObj = new Audio();
     audioEvents = [
-        'ended',
         'error',
         'play',
         'playing',
@@ -25,6 +24,7 @@ export class MusicPanelComponent implements OnDestroy {
     ];
 
     currentTime = '00:00';
+    durationInt = 0;
     duration = '00:00';
     seek = 0;
     isShowPlayList = false;
@@ -41,8 +41,9 @@ export class MusicPanelComponent implements OnDestroy {
     }
 
     listPlayList(song, $clickEvent) {
-        this.actionMethod($clickEvent);
         this.deleteFromPlayList(song);
+        (document.getElementById(($clickEvent.target as HTMLButtonElement).id + '+') as HTMLButtonElement)
+            .disabled = false;
     }
 
     addSongToPlayList() {
@@ -77,6 +78,7 @@ export class MusicPanelComponent implements OnDestroy {
             const handler = (event: Event) => {
                 this.seek = this.audioObj.currentTime;
                 this.duration = this.timeFormat(this.audioObj.duration);
+                this.durationInt = this.audioObj.duration;
                 this.currentTime = this.timeFormat(this.audioObj.currentTime);
             };
 
