@@ -48,7 +48,6 @@ export class MusicPanelComponent implements OnDestroy {
         const clickButtonToId = (clickButton as HTMLButtonElement).id;
         const searchButtonId = document.getElementById(clickButtonToId);
         this.buttonUnDisabled = (searchButtonId as HTMLButtonElement).disabled = false;
-        // (document.getElementById(($clickEvent.target as HTMLButtonElement).id + '+') as HTMLButtonElement).disabled = false;
     }
 
     addSongToPlayList() {
