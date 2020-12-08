@@ -34,6 +34,7 @@ export class MusicPanelComponent implements OnDestroy {
     @Input() public playListArray: Set<Song>;
 
     @Output() public updatePlayListEvent = new EventEmitter<Set<Song>>();
+    private variableSix: boolean;
 
     listSong(song, $clickEvent) {
         this.actionMethod($clickEvent);
@@ -42,8 +43,17 @@ export class MusicPanelComponent implements OnDestroy {
 
     listPlayList(song, $clickEvent) {
         this.deleteFromPlayList(song);
-        (document.getElementById(song.id + '+') as HTMLButtonElement).disabled = false;
-        // console.log(($clickEvent.target as HTMLButtonElement).id);
+        const variableTwo = $clickEvent.target;
+        const variableFour = (variableTwo as HTMLButtonElement).id;
+        const variableFive = document.getElementById(variableFour);
+        this.variableSix = (variableFive as HTMLButtonElement).disabled = false;
+        // console.log(variableOne);
+        // console.log(variableTwo);
+        // console.log(variableThree);
+        // console.log(variableFour);
+        // console.log(variableFive);
+        // console.log(variableSix);
+        // (document.getElementById(($clickEvent.target as HTMLButtonElement).id + '+') as HTMLButtonElement).disabled = false;
     }
 
     addSongToPlayList() {
