@@ -40,9 +40,10 @@ export class MusicPanelComponent implements OnDestroy {
         this.addToPlayList(song);
     }
 
-    listPlayList(song) {
+    listPlayList(song, $clickEvent) {
         this.deleteFromPlayList(song);
         (document.getElementById(song.id + '+') as HTMLButtonElement).disabled = false;
+        // console.log(($clickEvent.target as HTMLButtonElement).id);
     }
 
     addSongToPlayList() {
