@@ -14,11 +14,17 @@ The project has a music player with the ability to create your own playlist.
 * Scroll bar to change sound volume.
 
 # About the project
-When you left click on a song, it plays. 
-When you press the "Pause" button, playback will pause for that second.
-When you press the "Stop" button, the song timer is reset to zero and playback ends.
-When you click on the "playlist" button, a field with a list of songs in the playlist opens.
-Pressing the "+" button adds the song to the playlist, pressing the "x" button removes the song from the playlist.
+When you left click on a song, it plays.  
+
+When you press the "Pause" button, playback will pause for that second.  
+
+When you press the "Stop" button, the song timer is reset to zero and playback ends.  
+
+When you click on the "playlist" button, a field with a list of songs in the playlist opens.  
+
+Pressing the "+" button adds the song to the playlist, pressing the "x" button removes the song from the playlist.  
+
+![](final.gif)
 
 # Technologies used
 * Angular
