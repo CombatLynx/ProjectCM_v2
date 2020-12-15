@@ -24,7 +24,7 @@ When you click on the "playlist" button, a field with a list of songs in the pla
 
 Pressing the "+" button adds the song to the playlist, pressing the "x" button removes the song from the playlist.  
 
-![](final.gif)
+![me](https://github.com/CombatLynx/musicPlayer/blob/release/src/assets/images/final.gif)
 
 # Technologies used
 * Angular
