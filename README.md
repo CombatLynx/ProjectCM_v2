@@ -3,7 +3,7 @@
 2) npm install 
 3) npm run
 
-# Project description:
+# Project description
 The project has a music player with the ability to create your own playlist.
 
 # Minimum viable product:
@@ -13,5 +13,12 @@ The project has a music player with the ability to create your own playlist.
 * Scroll bars are designed to rewind audio tracks;
 * Scroll bar to change sound volume.
 
-# Technologies used:
+# About the project
+When you left click on a song, it plays. 
+When you press the "Pause" button, playback will pause for that second.
+When you press the "Stop" button, the song timer is reset to zero and playback ends.
+When you click on the "playlist" button, a field with a list of songs in the playlist opens.
+Pressing the "+" button adds the song to the playlist, pressing the "x" button removes the song from the playlist.
+
+# Technologies used
 * Angular
