@@ -1,7 +1,7 @@
 # Installation:
 1) https://github.com/CombatLynx/musicPlayer.git
 2) npm install 
-3) npm run
+3) npm start
 
 # Project description
 The project has a music player with the ability to create your own playlist.
