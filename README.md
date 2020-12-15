@@ -15,4 +15,3 @@ The project has a music player with the ability to create your own playlist.
 
 # Technologies used:
 * Angular
-![til](./app/assets/images/babina.png)
