@@ -216,8 +216,20 @@
 }
 
 .min {
-    margin-right: 0.2em;
+    margin-right: 5px;
     font-weight: bold;
+}
+
+.max {
+    margin-left: 5px;
+}
+
+.time-begin {
+    margin-right: 5px;
+}
+
+.time-end {
+    margin-left: 5px;
 }
 
 .time-begin,

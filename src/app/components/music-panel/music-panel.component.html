@@ -1,26 +1,18 @@
 <div class="container my-song">
     <div class="row">
         <div class="col block-my-songs justify-content-center align-items-center">
-            <div class="my-songs-name"> My songs</div>
+            <div class="my-songs-name">My songs</div>
             <div *ngFor="let song of songs" class="list-my-songs">
-                <div (click)="openFile(song.url)">
-                    {{song.name}}
-                </div>
-                <button (click)="listSong(song, $event)" class="add-song" type="submit" [id] = "song.id">
-                   +
-                </button>
+                <div (click)="openFile(song.url)">{{song.name}}</div>
+                <button (click)="listSong(song, $event)" class="add-song" type="submit" [id] = "song.id">+</button>
             </div>
         </div>
 
         <div *ngIf="isShowPlayList" class="col-6 block-my-playlist">
             <div class="my-songs-playlist"> My play list</div>
             <div *ngFor="let song of playListArray" class="list-my-playlist">
-                <div (click)="openFile(song.url)">
-                    {{song.name}}
-                </div>
-                <button (click)="listPlayList(song, $event)" class="delete-song" type="submit" [id] = "song.id">
-                    x
-                </button>
+                <div (click)="openFile(song.url)">{{song.name}}</div>
+                <button (click)="listPlayList(song, $event)" class="delete-song" type="submit" [id] = "song.id">x</button>
             </div>
         </div>
     </div>
@@ -29,24 +21,24 @@
 <div class="container block-menu">
     <div class="row">
         <div class="col-3 button-play">
-            <button (click)="play()" class="play" type="submit"> Play</button>
+            <button (click)="play()" class="play" type="submit">Play</button>
         </div>
         <div class="col-3 button-pause">
-            <button (click)="pause()" class="pause" type="submit"> Pause</button>
+            <button (click)="pause()" class="pause" type="submit">Pause</button>
         </div>
         <div class="col-3 button-stop">
-            <button (click)="stop()" class="stop" type="submit"> Stop</button>
+            <button (click)="stop()" class="stop" type="submit">Stop</button>
         </div>
         <div class="col-3 button-add-playlist">
-            <button (click)="addSongToPlayList()" class="add-playlist" type="submit"> Play list</button>
+            <button (click)="addSongToPlayList()" class="add-playlist" type="submit">Play list</button>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12 position-scroll-bar">
-            <div class="header-scroll"> Scroll bar</div>
+            <div class="header-scroll">Scroll bar</div>
             <div class="time-song">
-                <span class="time-begin"> {{currentTime}} </span>
+                <span class="time-begin">{{currentTime}}</span>
                 <label>
                     <input (input)="setSeekTo($event)"
                            value="{{seek}}"
@@ -56,15 +48,15 @@
                            min="0"
                            type="range">
                 </label>
-                <span class="time-end"> {{duration}} </span>
+                <span class="time-end">{{duration}}</span>
             </div>
         </div>
 
         <div class="col-12 position-scroll-volume">
-            <div class="header-volume"> Volume</div>
+            <div class="header-volume">Volume</div>
             <div class="volume-song">
                 <label>
-                    <span class="min"> min </span>
+                    <span class="min">min</span>
                     <input (input)="setVolume($event)"
                            class="scroll-bar"
                            max="1"
@@ -72,7 +64,7 @@
                            step="any"
                            type="range"
                            value="0.3">
-                    <span class="max"> max </span>
+                    <span class="max">max</span>
                 </label>
             </div>
         </div>
